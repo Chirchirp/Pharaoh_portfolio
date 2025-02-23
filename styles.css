@@ -110,7 +110,7 @@ section {
   position: relative;
   margin: 100px 0 30px; /* Leave space for fixed header */
   padding: 0 10px;
-  scroll-margin-top: 120px; /* Ensure sections aren't hidden behind header */
+  scroll-margin-top: 100px; /* Ensures section top aligns precisely below header */
 }
 .section-container {
   background: var(--section-bg);
@@ -430,4 +430,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 480px) {
-  .nav
+  .nav-links {
+    gap: 10px;
+  }
+  .marquee span {
+    font-size: 1rem;
+  }
+}
