@@ -11,17 +11,15 @@ html {
 }
 body {
   font-family: 'Gill Sans Nova', sans-serif;
-  /* Animated gradient background for entire page */
-  background: linear-gradient(135deg, #1e1e1e, #2c2c2c, #1e1e1e, #3a3a3a);
+  /* Animated pastel blue gradient background */
+  background: linear-gradient(135deg, #d0efff, #b8e1ff, #d0efff, #b8e1ff);
   background-size: 400% 400%;
   animation: backgroundGradient 15s ease infinite;
-  color: #e0e0e0;
+  color: #2d3436;
   line-height: 1.7;
 }
 
-/* -------------------------
-   BACKGROUND ANIMATION
-------------------------- */
+/* Background Gradient Animation */
 @keyframes backgroundGradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -29,12 +27,12 @@ body {
 }
 
 /* -------------------------
-   COLOR & THEME VARIABLES
+   THEME VARIABLES (Blue Pastels)
 ------------------------- */
 :root {
-  --primary-color: #ff6f61;
-  --accent-gradient: linear-gradient(135deg, #ff6f61, #fbc2eb);
-  --section-bg: linear-gradient(135deg, #1e1e1e, #2c2c2c, #1e1e1e, #3a3a3a);
+  --primary-color: #74b9ff; /* A lively pastel blue */
+  --accent-gradient: linear-gradient(135deg, #a5d8ff, #74b9ff);
+  --section-bg: linear-gradient(135deg, #e8f7ff, #d0efff, #e8f7ff, #d0efff);
 }
 
 /* -------------------------
@@ -47,31 +45,31 @@ body {
   z-index: 1000;
   background: var(--accent-gradient);
   overflow: hidden;
+  border-bottom: 2px solid var(--primary-color);
 }
 .marquee {
   width: 100%;
   overflow: hidden;
   position: relative;
-  height: 40px; /* Adjust height as needed */
+  height: 40px;
 }
 .marquee span {
   position: absolute;
   white-space: nowrap;
   font-size: 1.2rem;
-  color: #fff;
-  animation: headerScroll 10s linear infinite;
+  color: #2d3436; /* Dark text for readability */
+  animation: headerScroll 12s linear infinite;
 }
 @keyframes headerScroll {
-  0% { transform: translate(100%, 0); opacity: 1; }
-  50% { transform: translate(0, 0); opacity: 1; }
-  100% { transform: translate(-100%, -100%); opacity: 0; }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
 /* -------------------------
    NAVIGATION (Below Marquee)
 ------------------------- */
 .navbar {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255,255,255,0.8);
   padding: 10px 0;
 }
 .nav-container {
@@ -90,7 +88,7 @@ body {
 }
 .nav-link {
   text-decoration: none;
-  color: #fff;
+  color: #2d3436;
   font-size: 0.9rem;
   display: flex;
   align-items: center;
@@ -108,20 +106,20 @@ body {
 ------------------------- */
 section {
   position: relative;
-  margin: 80px 0 30px; /* Leave space for fixed header */
+  margin: 100px 0 30px; /* Leave space for fixed header */
   padding: 0 10px;
 }
 .section-container {
   background: var(--section-bg);
   background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
+  animation: sectionGradient 15s ease infinite;
   border-radius: 40px;
   padding: 40px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   margin: auto;
   max-width: 1200px;
 }
-@keyframes gradientAnimation {
+@keyframes sectionGradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
@@ -157,7 +155,7 @@ section {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: radial-gradient(ellipse at center, transparent 70%, rgba(255,255,255,0.2) 100%);
+  background: radial-gradient(ellipse at center, transparent 70%, rgba(255,255,255,0.3) 100%);
   pointer-events: none;
 }
 .profile-info {
@@ -196,17 +194,17 @@ section {
   justify-content: center;
 }
 .expertise-item {
-  background-color: #282828;
+  background-color: #ffffff;
   padding: 15px;
   border-radius: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   width: 220px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 .expertise-item:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 .expertise-item h4 {
   margin-bottom: 10px;
@@ -239,10 +237,10 @@ section {
   margin-top: 20px;
 }
 .project-card {
-  background-color: #282828;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .project-card h3 {
   margin-bottom: 10px;
@@ -250,7 +248,7 @@ section {
 }
 .project-card p {
   margin-bottom: 10px;
-  color: #ccc;
+  color: #555;
 }
 .project-skills {
   font-size: 0.9rem;
@@ -263,7 +261,7 @@ section {
   transition: color 0.3s ease;
 }
 .project-link:hover {
-  color: #e0e0e0;
+  color: #2d3436;
 }
 
 /* -------------------------
@@ -292,16 +290,17 @@ section {
 }
 .btn-resume:hover,
 .btn-certifications:hover {
-  background-color: #ff856f;
+  background-color: #74b9ff;
 }
 
 /* -------------------------
    FOOTER
 ------------------------- */
 .footer {
-  background-color: #282828;
+  background-color: #ffffff;
   padding: 20px;
   text-align: center;
+  border-top: 2px solid var(--primary-color);
 }
 .footer-container {
   max-width: 1200px;
@@ -315,16 +314,16 @@ section {
 }
 .social-links {
   display: flex;
-  gap: 10px;
+  gap: 15px;
 }
 .social-link {
   color: var(--primary-color);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 .social-link:hover {
   transform: scale(1.1);
-  color: #e0e0e0;
+  color: #2d3436;
 }
 .footer-links {
   margin-top: 10px;
@@ -337,7 +336,7 @@ section {
   transition: color 0.3s ease;
 }
 .footer-links a:hover {
-  color: #e0e0e0;
+  color: #2d3436;
 }
 
 /* -------------------------
@@ -352,19 +351,19 @@ section {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.4);
 }
 .modal-content {
-  background-color: #1e1e1e;
+  background-color: #ffffff;
   margin: 10% auto;
   padding: 20px;
   border-radius: 20px;
   max-width: 500px;
   position: relative;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 .modal .close {
-  color: #aaa;
+  color: #555;
   position: absolute;
   right: 15px;
   top: 10px;
@@ -372,7 +371,7 @@ section {
   cursor: pointer;
 }
 .modal .close:hover {
-  color: #fff;
+  color: var(--primary-color);
 }
 .modal-form label {
   display: block;
@@ -385,10 +384,10 @@ section {
   width: 100%;
   padding: 8px;
   margin-bottom: 15px;
-  border: 1px solid #444;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #282828;
-  color: #fff;
+  background-color: #f1f1f1;
+  color: #2d3436;
 }
 .modal-form button {
   background-color: var(--primary-color);
@@ -400,7 +399,7 @@ section {
   font-weight: bold;
 }
 .modal-form button:hover {
-  background-color: #ff856f;
+  background-color: #74b9ff;
 }
 
 /* -------------------------
