@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const messageForm = document.getElementById("messageForm");
   messageForm.addEventListener("submit", function(e) {
     e.preventDefault();
-    emailjs.sendForm('ID:service_h3eoa9g', 'template_9varj9u', this)
+    emailjs.sendForm('service_h3eoa9g', 'template_9varj9u', this)
       .then(function() {
           alert("Thanks for your message. You will receive a response within 24 hours.");
           messageModal.style.display = "none";
