@@ -421,3 +421,24 @@ section {
     font-size: 1rem;
   }
 }
+/* Set a uniform dark grey background for the entire page */
+body {
+  font-family: 'Gill Sans Nova', sans-serif;
+  background-color: #111;  /* Dark grey */
+  color: #e0e0e0;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply an animated gradient to every section container */
+.section-container {
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c, #1e1e1e, #3a3a3a);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  border-radius: 40px;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  max-width: 1200px;
+}
