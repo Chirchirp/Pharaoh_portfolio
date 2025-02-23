@@ -2,105 +2,317 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name - Portfolio</title>
+  <!-- Ensures the site scales well on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pharaoh Kipkirui Chirchir | Data Analyst Portfolio</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-u6GULrF6MCkI8wVhjRW8YER0U9b7/5a+okyk1Blb+qPZV8C3uP+mjWJgUnFvmAXZ9kghMfaAFl6i8HkM+65fBg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Import Gill Sans Nova -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Gill+Sans+Nova&display=swap" rel="stylesheet" />
+  <!-- External CSS -->
   <link rel="stylesheet" href="styles.css" />
-  <!-- Include Typed.js for animated text effects -->
+  <!-- Typed.js for animated text in the header -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
 </head>
 <body>
-  <!-- Top Bar with Moving Animations -->
+  <!-- Header with Animated Top Bar & Navigation -->
   <header class="top-bar">
-    <nav class="nav-menu">
-      <ul>
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Connect</a></li>
-      </ul>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">Pharaoh Kipkirui Chirchir</div>
+        <ul class="nav-links">
+          <li><a href="#profile" class="nav-link"><i class="fas fa-user"></i> Profile</a></li>
+          <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About Me</a></li>
+          <li><a href="#projects" class="nav-link"><i class="fas fa-folder"></i> Projects</a></li>
+          <li><a href="#skills" class="nav-link"><i class="fas fa-database"></i> Skills</a></li>
+          <li><a href="#resume-section" class="nav-link"><i class="fas fa-file"></i> Resume</a></li>
+          <li><a href="#" id="messageBtn" class="nav-link"><i class="fas fa-envelope"></i> Message</a></li>
+        </ul>
+      </div>
     </nav>
     <div class="top-bar-content">
-      <h1>Welcome, I'm [Your Name]</h1>
+      <h1>Welcome, I'm Pharaoh Kipkirui Chirchir</h1>
       <span class="typed"></span>
     </div>
   </header>
-
-  <!-- Profile Section -->
-  <section id="profile" class="section profile-section">
-    <div class="container">
-      <img src="images/profile.jpg" alt="Profile Picture" class="profile-img" />
-      <div class="profile-info">
-        <h2>Profile</h2>
-        <p>
-          A brief profile summary goes here. Highlight your expertise,
-          passion, and what makes you unique.
-        </p>
+  
+  <main>
+    <!-- Profile Section -->
+    <section id="profile" class="profile-section">
+      <div class="container">
+        <div class="profile-content">
+          <!-- Profile Photo -->
+          <div class="profile-photo">
+            <img src="images/profile.jpg" alt="Profile Photo of Pharaoh Kipkirui Chirchir" />
+          </div>
+          <!-- Profile Info -->
+          <div class="profile-info">
+            <h1>Pharaoh Kipkirui Chirchir</h1>
+            <p class="location" style="font-style: italic;">Nairobi, Kenya</p>
+            <p class="brief-bio">
+              Experienced Data Analyst bridging the gap between raw data and strategic decision-making. Skilled in Analytics, Visualization, and Machine Learning.
+            </p>
+            <p><strong>Data Analyst | BI Specialist | Machine Learning Expert</strong></p>
+          </div>
+          <!-- Education -->
+          <div class="education">
+            <h2>Education</h2>
+            <p>
+              <strong>Master of Science in Data Analytics</strong><br />
+              Nexford University | Nov 2023 – Dec 2024
+            </p>
+            <p>
+              <strong>Bachelor of Economics and Statistics</strong><br />
+              Chuka University | Sep 2012 – Nov 2016
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- About Me Section -->
-  <section id="about" class="section about-section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        Write a detailed introduction about yourself, your background,
-        skills, and interests. Keep it engaging and personal.
-      </p>
-    </div>
-  </section>
-
-  <!-- Projects Completed Section -->
-  <section id="projects" class="section projects-section">
-    <div class="container">
-      <h2>Projects Completed</h2>
-      <div class="project">
-        <h3>Project Title 1</h3>
+    </section>
+    
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>About Me</h2>
+        <p><strong>Seasoned Data Analyst | 7+ Years Turning Data into Strategic Impact</strong></p>
         <p>
-          Description of project one. Skills used: HTML, CSS, JavaScript,
-          etc.
+          I design and implement end-to-end analytics solutions that drive efficiency, automation, and data-driven decision-making across industries. With a strong foundation in data modeling, predictive analytics, and business intelligence, I transform complex data into actionable insights that optimize performance and enhance strategic planning.
         </p>
+        <h3>Key Expertise</h3>
+        <div class="expertise">
+          <div class="expertise-item">
+            <h4>Advanced Analytics</h4>
+            <p class="short-description">
+              Utilizing advanced statistical methods and machine learning algorithms to predict trends and forecast performance.
+            </p>
+            <p class="long-description">
+              Implementing predictive models with time-series analysis and supervised learning to drive business decisions.
+            </p>
+          </div>
+          <div class="expertise-item">
+            <h4>BI &amp; Visualization</h4>
+            <p class="short-description">
+              Developing interactive dashboards and automated reporting solutions.
+            </p>
+            <p class="long-description">
+              Building dynamic dashboards using tools like Tableau, Power BI, and custom web apps for quick decision-making.
+            </p>
+          </div>
+          <div class="expertise-item">
+            <h4>Data Infrastructure</h4>
+            <p class="short-description">
+              Designing scalable data pipelines and efficient ETL workflows.
+            </p>
+            <p class="long-description">
+              Working with AWS and Azure to create robust data architecture for efficient processing and storage.
+            </p>
+          </div>
+          <div class="expertise-item">
+            <h4>Impact</h4>
+            <p class="short-description">
+              Delivering efficiency gains of 30-95% through data-driven strategies.
+            </p>
+            <p class="long-description">
+              Collaborating with cross-functional teams to enhance business performance and drive growth.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="project">
-        <h3>Project Title 2</h3>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <h2>Projects Completed</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>The Rise of Artificial Intelligence: Trends, Impact and Insights</h3>
+            <p>
+              An analysis of AI’s global growth, industry adoption trends, and its impact on employment opportunities.
+            </p>
+            <a href="https://github.com/Chirchirp/The-Rise-of-Artificial-Intelligence-Trends-Impact-and-Insights.ipynb" target="_blank" class="project-link">View Project</a>
+          </div>
+          <div class="project-card">
+            <h3>Beats by Dre: Consumer Insights Data Analytics</h3>
+            <p>
+              Customer segmentation and market trend analysis using Python/Pandas with interactive visualizations.
+            </p>
+            <a href="https://colab.research.google.com/drive/1XNxkdTQ6K0fG2OkM0QLvi35e9zQ_1ODe?usp=sharing" target="_blank" class="project-link">View Project</a>
+          </div>
+          <div class="project-card">
+            <h3>Customer Churn Model</h3>
+            <p>
+              Developed and deployed an XGBoost model with 89% accuracy to predict customer attrition, including Flask API implementation.
+            </p>
+            <a href="https://github.com/Chirchirp/Final-Project--Model-Deployment" target="_blank" class="project-link">View Project</a>
+          </div>
+          <div class="project-card">
+            <h3>Credit Card Fraud Detection</h3>
+            <p>
+              Implemented ML models to identify fraudulent transactions with a 97% recall rate.
+            </p>
+            <a href="https://colab.research.google.com/drive/1ISRR1X1zJjAfEP9fE-_q_JMjLkc1YIa3?usp=sharing" target="_blank" class="project-link">View Project</a>
+          </div>
+          <div class="project-card">
+            <h3>HR Analytics with Power BI</h3>
+            <p>
+              Created an interactive Power BI dashboard tracking key HR metrics.
+            </p>
+            <a href="https://github.com/Chirchirp/Power-BI-Project-on-Employee-Attrition" target="_blank" class="project-link">View Project</a>
+          </div>
+          <div class="project-card">
+            <h3>SQL Data Mining &amp; Analysis</h3>
+            <p>
+              Developed complex SQL queries for data mining, cleaning, transformation, and reporting.
+            </p>
+            <a href="https://github.com/Chirchirp/Data-Analysis-with-SSMS" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Skills Summary Section -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <h2>Skills Summary</h2>
+        <div class="skills-categories">
+          <div class="skill-category">
+            <h3>Tools</h3>
+            <ul>
+              <li>Power BI</li>
+              <li>Excel</li>
+              <li>Tableau</li>
+              <li>SQL Server Management Studio</li>
+              <li>R Studio</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Platforms</h3>
+            <ul>
+              <li>Google Colab</li>
+              <li>Jupyter Notebook</li>
+              <li>VS Code</li>
+              <li>Qlik</li>
+              <li>Microsoft Dynamics ERP</li>
+              <li>KNIME</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <ul>
+              <li>Python</li>
+              <li>SQL</li>
+              <li>R</li>
+              <li>DAX</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Frameworks</h3>
+            <ul>
+              <li>Pandas</li>
+              <li>Numpy</li>
+              <li>Scikit-Learn</li>
+              <li>Matplotlib</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Soft Skills</h3>
+            <ul>
+              <li>Critical Thinking</li>
+              <li>Problem Solving</li>
+              <li>Communication</li>
+              <li>Collaboration</li>
+              <li>Data Storytelling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Resume Download Section -->
+    <section id="resume-section" class="resume-section">
+      <div class="container">
+        <h2>Resume and Certification Links</h2>
         <p>
-          Description of project two. Skills used: Python, SQL, Machine
-          Learning, etc.
+          For more details on my background, skills, and experience, feel free to download my resume.
+          To view my certifications and recognitions, click the button below.
         </p>
+        <div class="button-group">
+          <a href="resume.pdf" download class="btn-resume">Download Resume (PDF)</a>
+          <a href="https://www.linkedin.com/in/pharaoh-chirchir-0b600b138/details/certifications/" target="_blank" class="btn-certifications" title="View Certifications & Recognitions">View Certifications &amp; Recognitions</a>
+        </div>
       </div>
-      <!-- Add more projects as needed -->
-    </div>
-  </section>
-
-  <!-- Quick Links Section -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <h2>Connect with Me</h2>
-      <ul class="quick-links">
-        <li><a href="mailto:youremail@example.com">Email</a></li>
-        <li>
-          <a href="https://www.linkedin.com/in/yourprofile" target="_blank"
-            >LinkedIn</a
-          >
-        </li>
-        <li>
-          <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-        </li>
-        <li><a href="resume.pdf" download>Download Resume</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Footer Section -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-      <p>
-        <a href="terms.html" target="_blank">Terms and Conditions</a>
-      </p>
+    </section>
+  </main>
+  
+  <!-- Footer Section with Social Links & Terms -->
+  <footer id="footer" class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="social-connect">
+          <p><strong>Connect with me:</strong></p>
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/pharaoh-chirchir-0b600b138" class="social-link" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Chirchirp" class="social-link" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://wa.me/254725674081" class="social-link" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="mailto:chirkiruiphero@gmail.com" class="social-link" target="_blank">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <div class="footer-note">
+          <p>© 2025 Pharaoh Chirchir | All Rights Reserved</p>
+        </div>
+        <div class="footer-links">
+          <a href="#" id="termsBtn">Privacy Policy</a>
+          <a href="#" id="termsBtn">Terms of Service</a>
+        </div>
+      </div>
     </div>
   </footer>
-
+  
+  <!-- Message Modal -->
+  <div id="messageModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2><i class="fas fa-envelope"></i> Hi, I am happy to hear from you!</h2>
+      <form id="messageForm" class="modal-form">
+        <label for="yourName">Your Name:</label>
+        <input type="text" id="yourName" name="yourName" required />
+        <label for="yourEmail">Email Address:</label>
+        <input type="email" id="yourEmail" name="yourEmail" required />
+        <label for="yourMessage">Message:</label>
+        <textarea id="yourMessage" name="yourMessage" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Terms & Conditions Modal -->
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Terms &amp; Conditions</h2>
+      <p>By using this portfolio website, you agree to the following terms:</p>
+      <ul>
+        <li>All content displayed is for informational purposes only.</li>
+        <li>Unauthorized use, reproduction, or distribution of content is prohibited.</li>
+        <li>No guarantees are made regarding the accuracy of data presented.</li>
+        <li>The owner reserves the right to modify or remove content without notice.</li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- External JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
