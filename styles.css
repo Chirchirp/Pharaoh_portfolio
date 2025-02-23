@@ -1,0 +1,117 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Top Bar */
+.top-bar {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu ul li {
+  margin-left: 20px;
+}
+
+.nav-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.top-bar-content {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.top-bar-content h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Sections */
+.section {
+  padding: 100px 0;
+  margin-top: 80px;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.profile-info h2 {
+  margin: 0 0 10px;
+}
+
+/* Projects Section */
+.projects-section .project {
+  margin-bottom: 40px;
+}
+
+/* Quick Links */
+.quick-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.quick-links li {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.quick-links li a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Animation Keyframes */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
