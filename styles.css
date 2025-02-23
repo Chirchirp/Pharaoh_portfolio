@@ -11,35 +11,65 @@ html {
 }
 body {
   font-family: 'Gill Sans Nova', sans-serif;
-  background-color: #121212;
+  /* Animated gradient background for entire page */
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c, #1e1e1e, #3a3a3a);
+  background-size: 400% 400%;
+  animation: backgroundGradient 15s ease infinite;
   color: #e0e0e0;
   line-height: 1.7;
 }
 
 /* -------------------------
-   COLOR VARIABLES & THEME
+   BACKGROUND ANIMATION
 ------------------------- */
-:root {
-  --primary-color: #ff6f61;
-  --bg-dark: #121212;
-  --text-light: #e0e0e0;
-  --section-bg: #1e1e1e;
-  --accent-gradient: linear-gradient(135deg, #ff6f61, #fbc2eb);
+@keyframes backgroundGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* -------------------------
-   HEADER & NAVIGATION
+   COLOR & THEME VARIABLES
+------------------------- */
+:root {
+  --primary-color: #ff6f61;
+  --accent-gradient: linear-gradient(135deg, #ff6f61, #fbc2eb);
+  --section-bg: linear-gradient(135deg, #1e1e1e, #2c2c2c, #1e1e1e, #3a3a3a);
+}
+
+/* -------------------------
+   HEADER & MARQUEE
 ------------------------- */
 .top-bar {
-  background: var(--accent-gradient);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
-  color: #fff;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
-  padding-bottom: 20px;
+  width: 100%;
+  z-index: 1000;
+  background: var(--accent-gradient);
+  overflow: hidden;
 }
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 40px; /* Adjust height as needed */
+}
+.marquee span {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  color: #fff;
+  animation: headerScroll 10s linear infinite;
+}
+@keyframes headerScroll {
+  0% { transform: translate(100%, 0); opacity: 1; }
+  50% { transform: translate(0, 0); opacity: 1; }
+  100% { transform: translate(-100%, -100%); opacity: 0; }
+}
+
+/* -------------------------
+   NAVIGATION (Below Marquee)
+------------------------- */
 .navbar {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px 0;
@@ -48,14 +78,9 @@ body {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 20px;
-}
-.nav-logo {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #fff;
 }
 .nav-links {
   list-style: none;
@@ -77,35 +102,29 @@ body {
 .nav-link:hover {
   color: var(--primary-color);
 }
-.top-bar-content {
-  text-align: center;
-  padding: 40px 20px;
-}
-.top-bar-content h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #fff;
-}
-.typed {
-  font-size: 1.2rem;
-  color: #fff;
-}
 
 /* -------------------------
    SECTION CONTAINERS (Curvy Edges)
 ------------------------- */
 section {
   position: relative;
-  margin: 30px 0;
+  margin: 80px 0 30px; /* Leave space for fixed header */
   padding: 0 10px;
 }
 .section-container {
-  background-color: var(--section-bg);
+  background: var(--section-bg);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
   border-radius: 40px;
   padding: 40px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   margin: auto;
   max-width: 1200px;
+}
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* -------------------------
@@ -167,7 +186,7 @@ section {
 }
 .about-section h3 {
   font-size: 1.5rem;
-  margin: 20px 0 20px;
+  margin: 20px 0;
   color: var(--primary-color);
 }
 .expertise {
@@ -244,7 +263,7 @@ section {
   transition: color 0.3s ease;
 }
 .project-link:hover {
-  color: var(--text-light);
+  color: #e0e0e0;
 }
 
 /* -------------------------
@@ -305,7 +324,7 @@ section {
 }
 .social-link:hover {
   transform: scale(1.1);
-  color: var(--text-light);
+  color: #e0e0e0;
 }
 .footer-links {
   margin-top: 10px;
@@ -318,7 +337,7 @@ section {
   transition: color 0.3s ease;
 }
 .footer-links a:hover {
-  color: var(--text-light);
+  color: #e0e0e0;
 }
 
 /* -------------------------
@@ -385,15 +404,6 @@ section {
 }
 
 /* -------------------------
-   ANIMATED GRADIENT
-------------------------- */
-@keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* -------------------------
    MEDIA QUERIES
 ------------------------- */
 @media (max-width: 768px) {
@@ -414,31 +424,7 @@ section {
   .nav-links {
     gap: 10px;
   }
-  .top-bar-content h1 {
-    font-size: 1.5rem;
-  }
-  .typed {
+  .marquee span {
     font-size: 1rem;
   }
-}
-/* Set a uniform dark grey background for the entire page */
-body {
-  font-family: 'Gill Sans Nova', sans-serif;
-  background-color: #111;  /* Dark grey */
-  color: #e0e0e0;
-  line-height: 1.7;
-  margin: 0;
-  padding: 0;
-}
-
-/* Apply an animated gradient to every section container */
-.section-container {
-  background: linear-gradient(135deg, #1e1e1e, #2c2c2c, #1e1e1e, #3a3a3a);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
-  border-radius: 40px;
-  padding: 40px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  margin: auto;
-  max-width: 1200px;
 }
