@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- Ensures the site scales well on mobile devices -->
+  <!-- Ensure the site scales well on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pharaoh Kipkirui Chirchir | Data Analyst Portfolio</title>
   <!-- Font Awesome for icons -->
@@ -14,11 +14,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Gill+Sans+Nova&display=swap" rel="stylesheet" />
   <!-- External CSS -->
   <link rel="stylesheet" href="styles.css" />
-  <!-- Typed.js for animated text in the header -->
+  <!-- Typed.js for animated header text -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
 </head>
 <body>
-  <!-- Header with Animated Top Bar & Navigation -->
+  <!-- Header with animated gradient background and navigation -->
   <header class="top-bar">
     <nav class="navbar">
       <div class="nav-container">
@@ -27,7 +27,6 @@
           <li><a href="#profile" class="nav-link"><i class="fas fa-user"></i> Profile</a></li>
           <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About Me</a></li>
           <li><a href="#projects" class="nav-link"><i class="fas fa-folder"></i> Projects</a></li>
-          <li><a href="#skills" class="nav-link"><i class="fas fa-database"></i> Skills</a></li>
           <li><a href="#resume-section" class="nav-link"><i class="fas fa-file"></i> Resume</a></li>
           <li><a href="#" id="messageBtn" class="nav-link"><i class="fas fa-envelope"></i> Message</a></li>
         </ul>
@@ -41,8 +40,8 @@
   
   <main>
     <!-- Profile Section -->
-    <section id="profile" class="profile-section">
-      <div class="container">
+    <section id="profile">
+      <div class="section-container">
         <div class="profile-content">
           <!-- Profile Photo -->
           <div class="profile-photo">
@@ -74,8 +73,8 @@
     </section>
     
     <!-- About Me Section -->
-    <section id="about" class="about-section">
-      <div class="container">
+    <section id="about">
+      <div class="section-container">
         <h2>About Me</h2>
         <p><strong>Seasoned Data Analyst | 7+ Years Turning Data into Strategic Impact</strong></p>
         <p>
@@ -86,19 +85,19 @@
           <div class="expertise-item">
             <h4>Advanced Analytics</h4>
             <p class="short-description">
-              Utilizing advanced statistical methods and machine learning algorithms to predict trends and forecast performance.
+              Using statistical methods and machine learning to predict trends and forecast performance.
             </p>
             <p class="long-description">
-              Implementing predictive models with time-series analysis and supervised learning to drive business decisions.
+              Implementing predictive models with time-series analysis and supervised learning to drive decisions.
             </p>
           </div>
           <div class="expertise-item">
             <h4>BI &amp; Visualization</h4>
             <p class="short-description">
-              Developing interactive dashboards and automated reporting solutions.
+              Crafting interactive dashboards and automated reporting solutions.
             </p>
             <p class="long-description">
-              Building dynamic dashboards using tools like Tableau, Power BI, and custom web apps for quick decision-making.
+              Building dynamic visualizations using tools like Tableau, Power BI, and custom web apps.
             </p>
           </div>
           <div class="expertise-item">
@@ -107,154 +106,105 @@
               Designing scalable data pipelines and efficient ETL workflows.
             </p>
             <p class="long-description">
-              Working with AWS and Azure to create robust data architecture for efficient processing and storage.
+              Leveraging cloud platforms (AWS/Azure) to create robust and accessible data architectures.
             </p>
           </div>
           <div class="expertise-item">
             <h4>Impact</h4>
             <p class="short-description">
-              Delivering efficiency gains of 30-95% through data-driven strategies.
+              Delivering efficiency gains of 30–95% through data-driven strategies.
             </p>
             <p class="long-description">
-              Collaborating with cross-functional teams to enhance business performance and drive growth.
+              Collaborating with teams to enhance performance, reduce costs, and drive growth.
             </p>
           </div>
         </div>
       </div>
     </section>
     
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-      <div class="container">
+    <!-- Projects Completed Section -->
+    <section id="projects">
+      <div class="section-container">
         <h2>Projects Completed</h2>
         <div class="projects-grid">
+          <!-- Project 1 -->
           <div class="project-card">
             <h3>The Rise of Artificial Intelligence: Trends, Impact and Insights</h3>
             <p>
-              An analysis of AI’s global growth, industry adoption trends, and its impact on employment opportunities.
+              An in-depth analysis of AI’s global growth, industry adoption trends, and its impact on employment opportunities.
             </p>
+            <p class="project-skills"><strong>Skills Used:</strong> Python, Pandas, Data Visualization, Statistical Analysis</p>
             <a href="https://github.com/Chirchirp/The-Rise-of-Artificial-Intelligence-Trends-Impact-and-Insights.ipynb" target="_blank" class="project-link">View Project</a>
           </div>
+          <!-- Project 2 -->
           <div class="project-card">
             <h3>Beats by Dre: Consumer Insights Data Analytics</h3>
             <p>
-              Customer segmentation and market trend analysis using Python/Pandas with interactive visualizations.
+              Customer segmentation and market trend analysis using Python with interactive visualizations.
             </p>
+            <p class="project-skills"><strong>Skills Used:</strong> Python, Pandas, Matplotlib, Data Analysis</p>
             <a href="https://colab.research.google.com/drive/1XNxkdTQ6K0fG2OkM0QLvi35e9zQ_1ODe?usp=sharing" target="_blank" class="project-link">View Project</a>
           </div>
+          <!-- Project 3 -->
           <div class="project-card">
             <h3>Customer Churn Model</h3>
             <p>
-              Developed and deployed an XGBoost model with 89% accuracy to predict customer attrition, including Flask API implementation.
+              Developed and deployed an XGBoost model with 89% accuracy to predict customer attrition, complete with a Flask API.
             </p>
+            <p class="project-skills"><strong>Skills Used:</strong> Python, XGBoost, Flask, Data Modeling</p>
             <a href="https://github.com/Chirchirp/Final-Project--Model-Deployment" target="_blank" class="project-link">View Project</a>
           </div>
+          <!-- Project 4 -->
           <div class="project-card">
             <h3>Credit Card Fraud Detection</h3>
             <p>
-              Implemented ML models to identify fraudulent transactions with a 97% recall rate.
+              Implemented supervised and semi-supervised ML models to identify fraudulent transactions with a 97% recall rate.
             </p>
+            <p class="project-skills"><strong>Skills Used:</strong> Python, Logistic Regression, Isolation Forest, Machine Learning</p>
             <a href="https://colab.research.google.com/drive/1ISRR1X1zJjAfEP9fE-_q_JMjLkc1YIa3?usp=sharing" target="_blank" class="project-link">View Project</a>
           </div>
+          <!-- Project 5 -->
           <div class="project-card">
             <h3>HR Analytics with Power BI</h3>
             <p>
-              Created an interactive Power BI dashboard tracking key HR metrics.
+              Developed an interactive Power BI dashboard to track key HR metrics, attrition reasons, and departmental performance.
             </p>
+            <p class="project-skills"><strong>Skills Used:</strong> Power BI, DAX, Data Visualization</p>
             <a href="https://github.com/Chirchirp/Power-BI-Project-on-Employee-Attrition" target="_blank" class="project-link">View Project</a>
           </div>
+          <!-- Project 6 -->
           <div class="project-card">
             <h3>SQL Data Mining &amp; Analysis</h3>
             <p>
-              Developed complex SQL queries for data mining, cleaning, transformation, and reporting.
+              Developed complex SQL queries for data cleaning, transformation, and in-depth reporting.
             </p>
+            <p class="project-skills"><strong>Skills Used:</strong> SQL, Data Mining, Data Transformation</p>
             <a href="https://github.com/Chirchirp/Data-Analysis-with-SSMS" target="_blank" class="project-link">View Project</a>
           </div>
         </div>
       </div>
     </section>
     
-    <!-- Skills Summary Section -->
-    <section id="skills" class="skills-section">
-      <div class="container">
-        <h2>Skills Summary</h2>
-        <div class="skills-categories">
-          <div class="skill-category">
-            <h3>Tools</h3>
-            <ul>
-              <li>Power BI</li>
-              <li>Excel</li>
-              <li>Tableau</li>
-              <li>SQL Server Management Studio</li>
-              <li>R Studio</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Platforms</h3>
-            <ul>
-              <li>Google Colab</li>
-              <li>Jupyter Notebook</li>
-              <li>VS Code</li>
-              <li>Qlik</li>
-              <li>Microsoft Dynamics ERP</li>
-              <li>KNIME</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Languages</h3>
-            <ul>
-              <li>Python</li>
-              <li>SQL</li>
-              <li>R</li>
-              <li>DAX</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Frameworks</h3>
-            <ul>
-              <li>Pandas</li>
-              <li>Numpy</li>
-              <li>Scikit-Learn</li>
-              <li>Matplotlib</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Soft Skills</h3>
-            <ul>
-              <li>Critical Thinking</li>
-              <li>Problem Solving</li>
-              <li>Communication</li>
-              <li>Collaboration</li>
-              <li>Data Storytelling</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    
     <!-- Resume Download Section -->
-    <section id="resume-section" class="resume-section">
-      <div class="container">
-        <h2>Resume and Certification Links</h2>
+    <section id="resume-section">
+      <div class="section-container">
+        <h2>Resume &amp; Certifications</h2>
         <p>
-          For more details on my background, skills, and experience, feel free to download my resume.
-          To view my certifications and recognitions, click the button below.
+          For more details on my background, skills, and experience, download my resume below. Click the button to also view my certifications and recognitions.
         </p>
         <div class="button-group">
           <a href="resume.pdf" download class="btn-resume">Download Resume (PDF)</a>
-          <a href="https://www.linkedin.com/in/pharaoh-chirchir-0b600b138/details/certifications/" target="_blank" class="btn-certifications" title="View Certifications & Recognitions">View Certifications &amp; Recognitions</a>
+          <a href="https://www.linkedin.com/in/pharaoh-chirchir-0b600b138/details/certifications/" target="_blank" class="btn-certifications" title="View Certifications &amp; Recognitions">View Certifications &amp; Recognitions</a>
         </div>
       </div>
     </section>
   </main>
   
-  <!-- Footer Section with Social Links & Terms -->
+  <!-- Footer with Social Links and Terms -->
   <footer id="footer" class="footer">
     <div class="footer-container">
       <div class="footer-content">
-        <div class="social-connect">
-          <p><strong>Connect with me:</strong></p>
-        </div>
+        <p><strong>Connect with me:</strong></p>
         <div class="social-links">
           <a href="https://www.linkedin.com/in/pharaoh-chirchir-0b600b138" class="social-link" target="_blank">
             <i class="fab fa-linkedin"></i>
@@ -269,9 +219,7 @@
             <i class="fas fa-envelope"></i>
           </a>
         </div>
-        <div class="footer-note">
-          <p>© 2025 Pharaoh Chirchir | All Rights Reserved</p>
-        </div>
+        <p>© 2025 Pharaoh Chirchir | All Rights Reserved</p>
         <div class="footer-links">
           <a href="#" id="termsBtn">Privacy Policy</a>
           <a href="#" id="termsBtn">Terms of Service</a>
@@ -284,7 +232,7 @@
   <div id="messageModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h2><i class="fas fa-envelope"></i> Hi, I am happy to hear from you!</h2>
+      <h2><i class="fas fa-envelope"></i> Hi, I’m happy to hear from you!</h2>
       <form id="messageForm" class="modal-form">
         <label for="yourName">Your Name:</label>
         <input type="text" id="yourName" name="yourName" required />
