@@ -8,6 +8,7 @@
 }
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Offset for fixed header */
 }
 body {
   font-family: 'Gill Sans Nova', sans-serif;
@@ -30,9 +31,10 @@ body {
    THEME VARIABLES (Blue Pastels)
 ------------------------- */
 :root {
-  --primary-color: #74b9ff; /* A lively pastel blue */
+  --primary-color: #74b9ff; /* Lively pastel blue */
   --accent-gradient: linear-gradient(135deg, #a5d8ff, #74b9ff);
   --section-bg: linear-gradient(135deg, #e8f7ff, #d0efff, #e8f7ff, #d0efff);
+  --heading-color: #001f3f; /* Deep blue for headings */
 }
 
 /* -------------------------
@@ -106,7 +108,7 @@ body {
 ------------------------- */
 section {
   position: relative;
-  margin: 100px 0 30px; /* Leave space for fixed header */
+  margin: 100px 0 30px; /* Offset for fixed header */
   padding: 0 10px;
 }
 .section-container {
@@ -123,6 +125,13 @@ section {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+/* -------------------------
+   HEADINGS
+------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
 }
 
 /* -------------------------
@@ -180,12 +189,12 @@ section {
 .about-section h2 {
   font-size: 2rem;
   margin-bottom: 15px;
-  color: var(--primary-color);
+  color: var(--heading-color);
 }
 .about-section h3 {
   font-size: 1.5rem;
   margin: 20px 0;
-  color: var(--primary-color);
+  color: var(--heading-color);
 }
 .expertise {
   display: flex;
