@@ -25,13 +25,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // Handle Message Form submission
+  // Handle Message Form submission using EmailJS to forward emails.
+  // Replace 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', and 'YOUR_USER_ID' with your EmailJS details.
   const messageForm = document.getElementById("messageForm");
   messageForm.addEventListener("submit", function(e) {
     e.preventDefault();
-    alert("Thanks for your message. You will receive a response within 24 hours.");
-    messageModal.style.display = "none";
-    messageForm.reset();
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+      .then(function() {
+          alert("Thanks for your message. You will receive a response within 24 hours.");
+          messageModal.style.display = "none";
+          messageForm.reset();
+      }, function(error) {
+          alert("Failed to send message, please try again later.");
+      });
   });
   
   // Open Terms Modal when footer links are clicked
@@ -44,4 +50,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-
