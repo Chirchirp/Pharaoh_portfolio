@@ -1,18 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize Typed.js for animated header text
-  new Typed('.typed', {
-    strings: [
-      "Data Analyst",
-      "BI Specialist",
-      "Machine Learning Expert",
-      "Tech Innovator"
-    ],
-    typeSpeed: 50,
-    backSpeed: 25,
-    loop: true
-  });
+  // Modal functionality for Message and Terms modals
   
-  // Modal functionality
   const messageModal = document.getElementById("messageModal");
   const messageBtn = document.getElementById("messageBtn");
   const closeButtons = document.querySelectorAll(".modal .close");
