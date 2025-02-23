@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- Ensure proper scaling and mobile compatibility -->
+  <!-- Ensures proper scaling and mobile compatibility -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <title>Pharaoh Kipkirui Chirchir | Data Analyst Portfolio</title>
@@ -15,6 +15,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Gill+Sans+Nova&display=swap" rel="stylesheet" />
   <!-- External CSS -->
   <link rel="stylesheet" href="styles.css" />
+  <!-- EmailJS (Optional: for sending emails directly from the client) -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    // Initialize EmailJS with your user ID (replace 'YOUR_USER_ID' with your actual EmailJS user id)
+    (function(){
+      emailjs.init("service_h3eoa9g");
+    })();
+  </script>
 </head>
 <body>
   <!-- Fixed Header with Animated Marquee & Navigation -->
@@ -202,30 +210,21 @@
   </main>
   
   <!-- Footer with Social Links -->
-  <div class="footer" id="footer">  
-  <div class="footer">
+  <footer id="footer" class="footer">
     <div class="footer-container">
       <div class="footer-content">
-        <div class="social-connect">
-          <p><strong>Connect with me:</strong></p>
+        <p><strong>Connect with me:</strong></p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/pharaoh-chirchir-0b600b138" class="social-link" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Chirchirp" class="social-link" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://wa.me/254725674081" class="social-link" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
         </div>
-      
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/pharaoh-chirchir-0b600b138" class="social-link" target="_blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/Chirchirp" class="social-link" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://wa.me/254725674081" class="social-link" target="_blank">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="mailto:chirkiruiphero@gmail.com" class="social-link" target="_blank">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </div>
-
-      <div class="footer-note">
         <p>© 2025 Pharaoh Chirchir | All Rights Reserved</p>
         <div class="footer-links">
           <a href="#" id="termsBtn">Privacy Policy</a>
