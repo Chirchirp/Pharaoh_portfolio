@@ -220,21 +220,15 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 10px;
   color: var(--primary-color);
 }
+/* Display entire content without auto-hide */
 .short-description {
-  max-height: 60px;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-.expertise-item:hover .short-description {
-  max-height: 120px;
+  max-height: none;
+  overflow: visible;
 }
 .long-description {
-  display: none;
-  font-size: 0.9rem;
-}
-.expertise-item:hover .long-description {
   display: block;
   padding-top: 10px;
+  font-size: 0.9rem;
 }
 
 /* -------------------------
@@ -324,20 +318,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 .social-links {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 15px;
 }
-
 .social-link {
   color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
-
 .social-link:hover {
-   color: #2d3436;*/
+  transform: scale(1.1);
+  color: #2d3436;
 }
 .footer-links {
   margin-top: 10px;
