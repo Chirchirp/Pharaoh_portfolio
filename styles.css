@@ -295,7 +295,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .btn-resume:hover,
 .btn-certifications:hover,
-.btn-blog:hover { background-color: var(--teal-medium){
+.btn-blog:hover { 
   background-color: #74b9ff;
 }
 
