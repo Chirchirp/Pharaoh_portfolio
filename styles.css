@@ -284,7 +284,8 @@ h1, h2, h3, h4, h5, h6 {
   gap: 15px;
 }
 .btn-resume,
-.btn-certifications {
+.btn-certifications
+.btn-blog {
   background-color: var(--primary-color);
   color: #fff;
   padding: 10px 20px;
@@ -293,7 +294,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: background-color 0.3s ease;
 }
 .btn-resume:hover,
-.btn-certifications:hover {
+.btn-certifications:hover
+.btn-blog:hover { background-color: var(--teal-medium){
   background-color: #74b9ff;
 }
 
