@@ -4,7 +4,6 @@
 *::after {
   box-sizing: border-box;
 }
-
 :root {
   --primary-color: #3498db;
   --heading-color: #333;
@@ -12,25 +11,51 @@
   --text-color: #555;
   --transition-speed: 0.3s;
 }
-
 body {
   margin: 0;
   font-family: sans-serif;
   line-height: 1.6;
 }
 
+/* Header Section */
+.top-bar {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
 /* Profile Section */
 .profile-photo {
   position: relative;
 }
-
 .profile-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
-
 .profile-photo::after {
   content: "";
   position: absolute;
@@ -42,17 +67,14 @@ body {
   background: radial-gradient(ellipse at center, transparent 70%, rgba(255, 255, 255, 0.3) 100%);
   pointer-events: none;
 }
-
 .profile-info {
   flex: 2;
   padding: 0 20px;
 }
-
 .profile-info h1 {
   font-size: 2rem;
   color: var(--primary-color);
 }
-
 .education {
   min-width: 250px;
   flex-shrink: 0;
@@ -63,34 +85,30 @@ body {
   text-align: center;
   padding: 20px;
 }
-
 .about-section h2 {
   font-size: 2rem;
   margin-bottom: 10px;
   color: var(--heading-color);
 }
-
 .about-section h3 {
   font-size: 1.5rem;
   margin: 15px 0;
   color: var(--heading-color);
 }
-
 .about-section p {
   text-align: justify;
   margin: 0 auto;
   max-width: 800px;
 }
 
-/* Expertise / How I Work Section */
+/* How I Work / Expertise Section */
 .expertise {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   justify-content: center;
   padding: 20px;
 }
-
 .expertise-item {
   background-color: var(--background-color);
   padding: 10px;
@@ -98,23 +116,20 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
   cursor: pointer;
+  text-align: justify;
 }
-
 .expertise-item:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 .expertise-item h4 {
   margin-bottom: 8px;
   color: var(--primary-color);
 }
-
 .short-description {
   max-height: none;
   overflow: visible;
 }
-
 .long-description {
   display: block;
   padding-top: 8px;
@@ -129,36 +144,30 @@ body {
   margin-top: 15px;
   padding: 20px;
 }
-
 .project-card {
   background-color: var(--background-color);
   padding: 15px;
   border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .project-card h3 {
   margin-bottom: 8px;
   color: var(--primary-color);
 }
-
 .project-card p {
   margin-bottom: 8px;
   color: var(--text-color);
 }
-
 .project-skills {
   font-size: 0.9rem;
   color: var(--primary-color);
   margin-bottom: 8px;
 }
-
 .project-link {
   color: var(--primary-color);
   font-weight: bold;
   transition: color var(--transition-speed) ease;
 }
-
 .project-link:hover {
   color: #2d3436;
 }
@@ -168,18 +177,15 @@ body {
   text-align: center;
   padding: 20px;
 }
-
 .resume-section p {
   margin-bottom: 15px;
 }
-
 .button-group {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
 }
-
 .btn-resume,
 .btn-certifications {
   background-color: var(--primary-color);
@@ -190,7 +196,6 @@ body {
   transition: background-color var(--transition-speed) ease;
   text-decoration: none;
 }
-
 .btn-resume:hover,
 .btn-certifications:hover {
   background-color: #74b9ff;
@@ -203,48 +208,40 @@ body {
   text-align: center;
   border-top: 2px solid var(--primary-color);
 }
-
 .footer-container {
   max-width: 1200px;
   margin: auto;
   padding: 0 20px;
 }
-
 .footer-content {
   display: flex;
   flex-direction: column;
   gap: 8px;
   align-items: center;
 }
-
 .social-links {
   display: flex;
   gap: 10px;
 }
-
 .social-link {
   color: var(--primary-color);
   font-size: 1.5rem;
   transition: transform var(--transition-speed) ease, color var(--transition-speed) ease;
 }
-
 .social-link:hover {
   transform: scale(1.1);
   color: #2d3436;
 }
-
 .footer-links {
   margin-top: 8px;
   font-size: 0.9rem;
 }
-
 .footer-links a {
   color: var(--primary-color);
   text-decoration: none;
   margin: 0 4px;
   transition: color var(--transition-speed) ease;
 }
-
 .footer-links a:hover {
   color: #2d3436;
 }
@@ -261,7 +258,6 @@ body {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
 }
-
 .modal-content {
   background-color: var(--background-color);
   margin: 10% auto;
@@ -271,7 +267,6 @@ body {
   position: relative;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
 .modal .close {
   color: var(--text-color);
   position: absolute;
@@ -280,18 +275,15 @@ body {
   font-size: 24px;
   cursor: pointer;
 }
-
 .modal .close:hover {
   color: var(--primary-color);
 }
-
 .modal-form label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
   color: var(--primary-color);
 }
-
 .modal-form input,
 .modal-form textarea {
   width: 100%;
@@ -302,7 +294,6 @@ body {
   background-color: #f1f1f1;
   color: #2d3436;
 }
-
 .modal-form button {
   background-color: var(--primary-color);
   color: #fff;
@@ -312,7 +303,6 @@ body {
   cursor: pointer;
   font-weight: bold;
 }
-
 .modal-form button:hover {
   background-color: #74b9ff;
 }
@@ -320,10 +310,9 @@ body {
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
   .expertise {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-
 @media (max-width: 768px) {
   .profile-content {
     flex-direction: column;
@@ -335,8 +324,8 @@ body {
     text-align: center;
   }
   .nav-container {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
   }
   section {
     margin: 50px 0 20px;
@@ -344,8 +333,13 @@ body {
   }
   .top-bar {
     height: 70px;
+    padding: 10px;
   }
-  .expertise,
+  .expertise {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px;
+    gap: 10px;
+  }
   .projects-grid {
     padding: 10px;
     gap: 10px;
@@ -354,7 +348,6 @@ body {
     padding: 10px;
   }
 }
-
 @media (max-width: 480px) {
   .nav-links {
     gap: 8px;
@@ -364,11 +357,16 @@ body {
   }
   .top-bar {
     height: 60px;
+    padding: 8px 10px;
   }
   .about-section h2 {
     font-size: 1.8rem;
   }
   .about-section h3 {
     font-size: 1.3rem;
+  }
+  .expertise {
+    grid-template-columns: 1fr;
+    padding: 10px;
   }
 }
