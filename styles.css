@@ -101,39 +101,31 @@ body {
   max-width: 800px;
 }
 
-/* How I Work / Expertise Section */
+/* How I Work / Expertise Section - Updated to Match Projects Completed */
 .expertise {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
-  justify-content: center;
   padding: 20px;
 }
 .expertise-item {
   background-color: var(--background-color);
-  padding: 10px;
+  padding: 15px;
   border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
   cursor: pointer;
-  text-align: justify;
+  transition: box-shadow var(--transition-speed) ease;
 }
 .expertise-item:hover {
-  transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .expertise-item h4 {
   margin-bottom: 8px;
   color: var(--primary-color);
 }
-.short-description {
-  max-height: none;
-  overflow: visible;
-}
-.long-description {
-  display: block;
-  padding-top: 8px;
-  font-size: 0.9rem;
+.expertise-item p {
+  margin-bottom: 8px;
+  color: var(--text-color);
 }
 
 /* Projects Section */
@@ -310,7 +302,7 @@ body {
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
   .expertise {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 @media (max-width: 768px) {
@@ -335,13 +327,9 @@ body {
     height: 70px;
     padding: 10px;
   }
-  .expertise {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 15px;
-    gap: 10px;
-  }
+  .expertise,
   .projects-grid {
-    padding: 10px;
+    padding: 15px;
     gap: 10px;
   }
   .resume-section {
